@@ -1,4 +1,4 @@
-import {Stack, Button, IconButton} from '@mui/material'
+import {Stack, Button, IconButton, ButtonGroup} from '@mui/material'
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 
 export const MuiButton = () => {
@@ -35,9 +35,18 @@ export const MuiButton = () => {
         <IconButton area-aria-label='Clock' color='info' size='small'>
           <AccessTimeFilledIcon />
         </IconButton>
-
     </Stack>
-
+    <Stack direction='row' spacing={2}>
+      <ButtonGroup variant='contained' 
+      orientation='vertical' 
+      color='secondary' 
+      size='small'
+      area-aria-label='aligment button group' >
+      <Button onClick={() => alert('left button')}>Left </Button>
+      <Button >Center</Button>
+      <Button >Right</Button>
+      </ButtonGroup>
+    </Stack>
     </Stack>
   )
 }
